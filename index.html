@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A career plan for Sumedha Ghag</title>
+<meta name="description" content="Moving out of pharma into programme and operations work — roles, firms, salary bands, CV rewrites and a 90-day plan." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FCFCFB;--panel:#FFFFFF;--ink:#2A3330;--soft:#6B7772;--faint:#94A09A;
+  --sage:#7C9082;--sage-d:#5C7266;--sage-l:#EDF1EE;--slate:#4A5A6A;--slate-l:#EEF1F4;
+  --line:#E4E7E3;--amber-l:#F7F1E6;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+.serif{font-family:'Newsreader',Georgia,serif;font-weight:400;letter-spacing:-0.01em;font-variant-numeric:oldstyle-nums;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+p{margin:0 0 14px;} p:last-child{margin-bottom:0;}
+button{font:inherit;}
+
+.hero{padding:72px 0 40px;border-bottom:1px solid var(--line);}
+.hero-k{font-size:13px;color:var(--sage-d);margin:0 0 14px;}
+.hero h1{font-size:clamp(34px,5.5vw,52px);line-height:1.12;margin:0 0 20px;max-width:16ch;}
+.hero>.wrap>p{font-size:17px;color:var(--soft);max-width:62ch;margin:0 0 34px;}
+.ev{display:flex;flex-wrap:wrap;gap:10px;}
+.ev-i{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:150px;box-shadow:0 1px 2px rgba(42,51,48,.03);}
+.ev-n{font-size:19px;font-family:'Newsreader',serif;color:var(--sage-d);font-variant-numeric:oldstyle-nums;}
+.ev-l{font-size:12.5px;color:var(--faint);}
+@media (prefers-reduced-motion:no-preference){
+  .fade{opacity:0;transform:translateY(10px);animation:up .7s cubic-bezier(.2,.7,.3,1) forwards;}
+  @keyframes up{to{opacity:1;transform:none;}}
+}
+
+.shell{display:grid;grid-template-columns:214px 1fr;gap:44px;padding:36px 0 96px;align-items:start;}
+.rail{position:sticky;top:24px;display:flex;flex-direction:column;gap:2px;}
+.rail button{display:flex;align-items:center;gap:10px;background:none;border:none;cursor:pointer;
+  font-size:14px;color:var(--soft);text-align:left;padding:9px 12px;border-radius:9px;width:100%;
+  transition:background .15s,color .15s;}
+.rail button:hover{background:var(--sage-l);color:var(--ink);}
+.rail button[data-on="1"]{background:var(--sage-l);color:var(--sage-d);font-weight:500;}
+button:focus-visible,input:focus-visible,[role=checkbox]:focus-visible{outline:2px solid var(--sage);outline-offset:2px;}
+@media(max-width:860px){
+  .shell{grid-template-columns:1fr;gap:20px;}
+  .rail{position:static;flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:6px;
+    -webkit-overflow-scrolling:touch;}
+  .rail button{white-space:nowrap;width:auto;border:1px solid var(--line);}
+  .hero{padding:48px 0 32px;}
+}
+
+h2.sec{font-size:clamp(25px,3.6vw,32px);margin:0 0 10px;}
+.lede{font-size:16.5px;color:var(--soft);max-width:64ch;margin:0 0 30px;}
+h3{font-size:17px;margin:36px 0 12px;font-weight:600;}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:12px;box-shadow:0 1px 2px rgba(42,51,48,.03);}
+.note{background:var(--sage-l);border-radius:14px;padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--sage-d);}
+.warn{background:var(--amber-l);border-radius:14px;padding:18px 22px;margin:24px 0;font-size:14.5px;color:#7A5A24;}
+.muted{color:var(--soft);} .small{font-size:13.5px;}
+
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;padding:3px 10px;border-radius:999px;
+  background:var(--slate-l);color:var(--slate);}
+.pill.sage{background:var(--sage-l);color:var(--sage-d);}
+.pill.amber{background:var(--amber-l);color:#7A5A24;}
+
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:20px;}
+.chip{font-size:13.5px;padding:7px 14px;border-radius:999px;cursor:pointer;border:1px solid var(--line);
+  background:var(--panel);color:var(--soft);transition:all .15s;}
+.chip[data-on="1"]{background:var(--sage-d);border-color:var(--sage-d);color:#fff;}
+
+.firm{display:flex;justify-content:space-between;gap:18px;background:var(--panel);border:1px solid var(--line);
+  border-radius:14px;padding:17px 20px;margin-bottom:9px;}
+.firm-n{font-weight:600;font-size:15px;margin-bottom:3px;}
+.firm-pay{font-family:'Newsreader',serif;font-size:19px;color:var(--sage-d);white-space:nowrap;font-variant-numeric:oldstyle-nums;}
+.tags{display:flex;gap:6px;flex-wrap:wrap;}
+
+.bar-track{position:relative;height:12px;background:#F1F3F1;border-radius:999px;margin:8px 0;}
+.bar-fill{position:absolute;top:0;height:12px;border-radius:999px;transition:all .4s cubic-bezier(.2,.7,.3,1);}
+input[type=range]{width:100%;accent-color:#5C7266;margin:14px 0 6px;}
+.big{font-family:'Newsreader',serif;font-size:clamp(32px,6vw,46px);color:var(--sage-d);line-height:1.1;font-variant-numeric:oldstyle-nums;}
+
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:700px){.ba{grid-template-columns:1fr;}}
+.ba-box{border-radius:12px;padding:15px 17px;font-size:14px;}
+.ba-before{background:#F6F6F5;color:var(--soft);}
+.ba-after{background:var(--sage-l);color:var(--ink);}
+.ba-tag{font-size:12px;color:var(--faint);margin-bottom:7px;}
+
+.acc{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 20px;
+  margin-bottom:9px;cursor:pointer;text-align:left;display:flex;justify-content:space-between;gap:14px;
+  align-items:center;color:var(--ink);}
+.acc svg{min-width:17px;transition:transform .2s;}
+.acc[data-open="1"] svg{transform:rotate(180deg);}
+.acc-body{padding:2px 20px 18px;font-size:14.5px;color:var(--soft);margin:-9px 0 9px;background:var(--panel);
+  border:1px solid var(--line);border-top:none;border-radius:0 0 14px 14px;}
+
+.check{display:flex;gap:12px;align-items:flex-start;padding:11px 0;cursor:pointer;border-bottom:1px solid var(--line);}
+.check:last-child{border-bottom:none;}
+.box{width:20px;height:20px;min-width:20px;border-radius:6px;border:1.5px solid #CFD6D1;display:flex;
+  align-items:center;justify-content:center;margin-top:2px;transition:all .15s;}
+.box[data-on="1"]{background:var(--sage-d);border-color:var(--sage-d);}
+.check-t{font-size:14.5px;}
+.check-t[data-on="1"]{color:var(--faint);text-decoration:line-through;}
+.prog{height:8px;background:#F1F3F1;border-radius:999px;overflow:hidden;margin:10px 0 4px;}
+.prog i{display:block;height:100%;background:var(--sage);transition:width .4s;}
+
+.qbtn{display:block;width:100%;text-align:left;font-size:14.5px;background:var(--panel);
+  border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:8px;cursor:pointer;color:var(--ink);
+  transition:all .15s;}
+.qbtn:hover{border-color:var(--sage);background:var(--sage-l);}
+.link{background:none;border:none;font-size:13.5px;color:var(--sage-d);cursor:pointer;padding:0;
+  display:inline-flex;align-items:center;gap:5px;text-decoration:underline;}
+table{width:100%;border-collapse:collapse;font-size:14px;}
+th{text-align:left;font-weight:500;color:var(--faint);font-size:12.5px;padding:0 12px 8px 0;}
+td{padding:11px 12px 11px 0;border-top:1px solid var(--line);vertical-align:top;}
+.tbl-wrap{overflow-x:auto;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap fade">
+    <p class="hero-k">A plan for Sumedha Ghag · Mumbai · September 2026</p>
+    <h1 class="serif">You are further along than your CV says you are.</h1>
+    <p>Four years at Pfizer, and the record underneath the job title is a genuine operations record. The work now is to name it properly and take it somewhere new. This page is yours — read it in any order, and tick things off as you go.</p>
+    <div class="ev">
+      <div class="ev-i"><div class="ev-n serif">₹74 lakh</div><div class="ev-l">saved through your own initiative</div></div>
+      <div class="ev-i"><div class="ev-n serif">10,000+</div><div class="ev-l">consignments coordinated monthly</div></div>
+      <div class="ev-i"><div class="ev-n serif">98%+</div><div class="ev-l">data accuracy you designed for</div></div>
+      <div class="ev-i"><div class="ev-n serif">₹14–20 LPA</div><div class="ev-l">what you can realistically ask for now</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="shell">
+    <nav class="rail" id="rail" aria-label="Sections"></nav>
+    <main id="main"></main>
+  </div>
+</div>
+
+<script>
+/* ------------------------------------------------------------------ data */
+var ROLES=[
+{key:"bizops",name:"Business Operations Manager",entry:[12,17],later:[20,26],why:"The most direct translation of what you already do. Least explaining required in an interview."},
+{key:"pmo",name:"PMO Analyst → PMO Lead",entry:[12,16],later:[20,25],why:"Your governance dashboards and action trackers are literally the PMO job description."},
+{key:"program",name:"Program Manager",entry:[14,20],later:[24,30],why:"The highest-value pivot available to you. Worth targeting even if the first offer comes in as Coordinator."},
+{key:"chief",name:"Business Manager to a leader",entry:[13,19],later:[22,28],why:"Aim for the programme-office version of this role, not the CEO-mandate version — that one needs 8+ years."},
+{key:"consult",name:"Operations / Business Consulting",entry:[13,18],later:[22,30],why:"Open to you off-campus at Big 4 and Accenture. Avoid their life-sciences practices."},
+{key:"fintech",name:"Fintech / consumer-tech Business Ops",entry:[15,22],later:[25,32],why:"Highest ceiling and the fastest pace. Less predictable job security in exchange."}];
+var CURRENT=8.5;
+
+var FIRMS=[
+{n:"Deloitte India",t:"consulting",c:"Mumbai",mba:false,b:[13,17],i:"Intense",lvl:"Consultant",note:"Target Operations Transformation or Enterprise PMO — not the life sciences practice."},
+{n:"EY India",t:"consulting",c:"Mumbai",mba:false,b:[12,18],i:"Intense",lvl:"Consultant / Senior Consultant",note:"Business Consulting and PMO groups hire laterally without an MBA."},
+{n:"KPMG India",t:"consulting",c:"Mumbai",mba:false,b:[12,17],i:"Intense",lvl:"Consultant",note:"Also runs the Six Sigma course worth taking — a useful way in."},
+{n:"PwC India",t:"consulting",c:"Mumbai",mba:false,b:[12,17],i:"Intense",lvl:"Senior Associate",note:"Operations transformation work maps closely to your cost-savings record."},
+{n:"Accenture (Strategy &amp; Consulting / Operations)",t:"consulting",c:"Mumbai",mba:false,b:[15,22],i:"Intense",lvl:"Consultant",note:"Mumbai and Pune. Strong brand, strong internal mobility abroad later."},
+{n:"Genpact",t:"consulting",c:"Mumbai",mba:false,b:[12,18],i:"Steady",lvl:"Manager",note:"Operations transformation is their core. One of your best culture-to-skill fits."},
+{n:"WNS",t:"consulting",c:"Mumbai",mba:false,b:[11,17],i:"Steady",lvl:"Manager",note:"Process and delivery management, Mumbai headquartered."},
+{n:"Capgemini Invent",t:"consulting",c:"Pan-India",mba:false,b:[12,18],i:"Steady",lvl:"Consultant",note:"Mumbai and Pune presence."},
+{n:"Grant Thornton Bharat",t:"consulting",c:"Mumbai",mba:false,b:[10,16],i:"Balanced",lvl:"Consultant",note:"Mid-tier, more balanced hours than Big 4."},
+{n:"BDO India / Protiviti",t:"consulting",c:"Mumbai",mba:false,b:[10,16],i:"Balanced",lvl:"Consultant",note:"Good stepping stone if Big 4 says no on the first pass."},
+{n:"Infosys / TCS / Wipro / LTIMindtree Consulting",t:"consulting",c:"Pan-India",mba:false,b:[10,16],i:"Steady",lvl:"Consultant",note:"Process-heavy but a reliable route into a consulting title."},
+{n:"Praxis Global Alliance",t:"consulting",c:"Mumbai",mba:false,b:[12,18],i:"Intense",lvl:"Consultant",note:"Early client ownership and a steep curve. Hours are the trade-off."},
+{n:"Redseer / Avalon / Technopak",t:"consulting",c:"Mumbai",mba:true,b:[10,16],i:"Intense",lvl:"Consultant",note:"Research-heavy strategy shops; usually want an MBA or case prep."},
+{n:"Bain Capability Network",t:"consulting",c:"Pan-India",mba:false,b:[16,21],i:"Intense",lvl:"Associate",note:"Real non-MBA entry path — but Gurugram and Bengaluru, not Mumbai."},
+{n:"BCG Knowledge Team / McKinsey Knowledge Centre",t:"consulting",c:"Pan-India",mba:false,b:[15,21],i:"Intense",lvl:"Analyst / Associate",note:"Analytical bar is high. Gurugram, Bengaluru, Chennai."},
+{n:"Alvarez &amp; Marsal India",t:"consulting",c:"Mumbai",mba:true,b:[18,25],i:"Intense",lvl:"Associate",note:"Turnaround work. Almost always MBA-gated at associate level."},
+{n:"Kearney India",t:"consulting",c:"Mumbai",mba:true,b:[18,25],i:"Intense",lvl:"Business Analyst",note:"MBA-gated above analyst grade."},
+{n:"JPMorgan Chase (Mumbai)",t:"corporate",c:"Mumbai",mba:false,b:[15,24],i:"Steady",lvl:"Business Manager / Ops Manager",note:"Huge Mumbai footprint, structured career paths, strong maternity policy."},
+{n:"Morgan Stanley (Mumbai)",t:"corporate",c:"Mumbai",mba:false,b:[15,24],i:"Steady",lvl:"Business Manager",note:"COO-office roles are a near-perfect match for your current work."},
+{n:"Deutsche Bank / Barclays / Nomura / UBS / BNP (Mumbai)",t:"corporate",c:"Mumbai",mba:false,b:[14,22],i:"Steady",lvl:"Ops / Change Manager",note:"Large Mumbai GCCs, safe transport, women's networks."},
+{n:"HDFC / ICICI / Kotak / Axis",t:"corporate",c:"Mumbai",mba:false,b:[12,20],i:"Steady",lvl:"Program / Change Manager",note:"Hierarchical but stable, and Mumbai-headquartered."},
+{n:"Google / Microsoft / Adobe / Salesforce India",t:"corporate",c:"Pan-India",mba:false,b:[16,24],i:"Steady",lvl:"Program Manager / Business Ops",note:"Programme roles hire non-MBAs. Mostly Bengaluru and Hyderabad."},
+{n:"Amazon India",t:"corporate",c:"Pan-India",mba:false,b:[16,24],i:"Intense",lvl:"Program Manager",note:"Your logistics-coordination record reads well here. High intensity."},
+{n:"Uber / Swiggy / Zomato / Zepto (City &amp; Central Ops)",t:"corporate",c:"Mumbai",mba:false,b:[15,26],i:"Intense",lvl:"Ops / Program Manager",note:"City ops is among the best-paying mid-level operations work in India."},
+{n:"Nykaa / Dream11 / Tata Digital / Jio",t:"corporate",c:"Mumbai",mba:false,b:[14,24],i:"Steady",lvl:"Business Ops / Program Manager",note:"Mumbai-based consumer tech — the shortest commute-to-ceiling combination."},
+{n:"Razorpay / CRED / PhonePe / Groww / Meesho",t:"corporate",c:"Pan-India",mba:false,b:[15,28],i:"Intense",lvl:"Business Ops Manager",note:"Equity upside, flat structures, less job security."},
+{n:"HUL / Marico / Godrej / Tata Consumer / Nestlé",t:"corporate",c:"Mumbai",mba:false,b:[14,24],i:"Steady",lvl:"Ops / Supply Chain Manager",note:"Six Sigma is genuinely valued here. Brand roles prefer an MBA; ops roles don't."}];
+
+var CV_PAIRS=[
+{before:"Proactive execution and administrative support to senior leaders within commercial teams.",
+ after:"Ran the operating rhythm for a commercial leadership team — weekly steering, monthly business reviews, quarterly governance — tracking 100+ action items end-to-end to closure.",
+ why:"“Administrative support” is the single phrase costing you interviews. Same work, named the way a programme lead would name it."},
+{before:"Enabled seamless execution of 10,000+ monthly consignments by driving structured coordination across teams and vendors.",
+ after:"Coordinated cross-functional teams and external vendors to deliver 10,000+ monthly consignments on schedule through peak logistics periods, owning escalation and resolution.",
+ why:"Adds the two things a hiring manager looks for: scale you owned, and what you did when it went wrong."},
+{before:"Achieved cost optimization of ₹74 lakhs by proactively identifying risks and driving continuous improvement opportunities.",
+ after:"Identified operational risk in vendor and logistics workflows and led improvement initiatives delivering ₹74 lakh in annualised cost savings.",
+ why:"This is your strongest line and it should be first, not fourth. “Led” instead of “achieved” — you drove it."},
+{before:"Prepared executive-level presentations, reports, and dashboards while proactively maintaining structured trackers.",
+ after:"Built executive dashboards adopted as the standard input for quarterly governance reviews, giving BU leadership decision-ready visibility across initiatives.",
+ why:"“Adopted” is the word that matters. It shows your work outlived the meeting it was made for."}];
+
+var STAR=[
+{q:"Tell me about a time you improved a process.",a:"Point at the ₹74 lakh. Set it up properly: what the workflow looked like before, the specific risk you spotted, who you had to convince, what changed, and the number. Have the second-order detail ready — how you knew the saving was real."},
+{q:"Describe a time you managed competing priorities.",a:"Peak consignment periods. Ten thousand shipments a month, multiple vendors, a leadership review in the same week. Explain how you decided what slipped and what couldn't."},
+{q:"Give me an example of influencing without authority.",a:"Getting vendors and cross-functional stakeholders to adopt your tracking system. You had no line authority over any of them and it still became the standard."},
+{q:"Tell me about a time you handled a mistake or a data problem.",a:"The 98%+ accuracy figure implies you found and fixed the other 2%. Tell that story — the validation checks you introduced and what they caught."},
+{q:"Why are you leaving pharma?",a:"Pull, not push. Never criticise the industry: “I've built operations and programme execution skills that are industry-agnostic, and I want to apply them somewhere faster-moving, where operational excellence is a competitive differentiator rather than a compliance requirement.” Then pivot forward to what you want to build next."}];
+
+var CERTS=[
+{n:"Lean Six Sigma Green Belt",prov:"KPMG India, Benchmark Six Sigma or ASQ",cost:"₹23,000 – ₹34,000",time:"5 days",v:"do",say:"Do this first. Credible provider, fast, and it directly backs the process-improvement story you're already telling."},
+{n:"PMP",prov:"PMI",cost:"₹55,000 – ₹90,000 all-in",time:"35 hours + 10–14 weeks prep",v:"later",say:"High value — certified holders in India report roughly a third more pay — but you need 36 months of documented project experience first. Check below before you spend anything."},
+{n:"Power BI (PL-300), SQL, advanced Excel",prov:"Microsoft / self-paced",cost:"₹4,000 – ₹15,000",time:"4–8 weeks",v:"light",say:"You already build dashboards. A light refresh so you can speak to the tooling — not a headline credential."},
+{n:"Google Project Management Certificate",prov:"Coursera",cost:"~₹3,500 / month",time:"3–6 months",v:"light",say:"Good for learning the vocabulary. Weak as a differentiator at four years in. Useful while you wait for PMP eligibility."},
+{n:"CSM / SAFe Agilist",prov:"Scrum Alliance / Scaled Agile",cost:"₹20,000 – ₹30,000",time:"2 days",v:"maybe",say:"Only if you're targeting tech delivery PMO roles specifically. Otherwise it's noise."},
+{n:"CAPM",prov:"PMI",cost:"~₹25,000",time:"Weeks",v:"skip",say:"An entry-level credential. You're past it."},
+{n:"CSCP / CPIM",prov:"ASCM",cost:"₹80,000 – ₹1,50,000",time:"Months",v:"skip",say:"Only worth it if you commit to supply chain as your track. Expensive to hedge with."},
+{n:"CFA Level 1",prov:"CFA Institute",cost:"₹90,000+",time:"300+ hours",v:"skip",say:"Wrong track entirely for where you're heading."},
+{n:"Any “placement guaranteed” online Six Sigma",prov:"Various",cost:"₹2,000 – ₹10,000",time:"Days",v:"skip",say:"Recruiters recognise the mills. It can actively hurt you."}];
+var VERDICT={do:"Do this",later:"Do this — later",light:"Light touch",maybe:"Only if relevant",skip:"Skip"};
+
+var MBA_FULL=[
+{n:"SPJIMR PGPM, Mumbai",exp:"3 years minimum",fee:"₹22.66 lakh",out:"~₹24–26 LPA",fit:"best",note:"Your strongest full-time option. Mumbai, holistic admissions rather than pure score, and you clear the experience bar today."},
+{n:"ISB PGP, Hyderabad / Mohali",exp:"24 months minimum",fee:"₹40.5–44.5 lakh",out:"Median ₹32 LPA",fit:"stretch",note:"Eligible on paper. Recent cohorts average around a 716 GMAT, so this needs a strong score and a very tight story."},
+{n:"IIM Ahmedabad PGPX",exp:"4 years",fee:"~₹34.5 lakh",out:"Senior outcomes",fit:"stretch",note:"You technically qualify. The batch averages 7.5 years, though roughly 40% sit in the 4–6 year band — so it's real, just ambitious."},
+{n:"IIM Bangalore EPGP",exp:"5 years",fee:"~₹33.7 lakh",out:"Senior outcomes",fit:"no",note:"Not yet — you're a year short on experience."},
+{n:"IIM Calcutta MBAEx",exp:"~5 years",fee:"₹31–34 lakh",out:"Senior outcomes",fit:"no",note:"Same story. Revisit in 2027."},
+{n:"IIM Indore EPGP / XLRI GMP",exp:"~5 years",fee:"₹20–25 lakh",out:"Mid-senior",fit:"no",note:"Borderline — likely a year early."}];
+
+var MBA_PART=[
+{n:"JBIMS Part-Time MMS, Churchgate",fee:"₹1.89 lakh total",sched:"3 years · evenings 6:30–9:30 + Sundays",fit:"best",note:"The only part-time brand in Mumbai that genuinely helps you switch, and it costs less than one Big 4 certification budget."},
+{n:"SPJIMR PGEMP / PGPGM Executive",fee:"₹9–10 lakh+",sched:"21 months modular / weekends",fit:"good",note:"Strong brand and AMBA-accredited. PGEMP wants 5+ years; the executive general management route accepts 4+."},
+{n:"NMIMS Part-Time / Online MBA",fee:"₹4–13 lakh",sched:"2–3 years",fit:"ok",note:"Credible second tier with real structure and career support. A safe choice, not a transformative one."},
+{n:"Welingkar part-time / hybrid",fee:"₹3–6 lakh",sched:"2–3 years",fit:"weak",note:"The most criticised of the Mumbai options — limited placement support and thin switch value for the money."},
+{n:"Amity / Manipal / upGrad-partnered online MBAs",fee:"₹1.5–4 lakh",sched:"2 years",fit:"weak",note:"Fine if you need the degree for an HR eligibility box. Close to zero switching power."}];
+
+var PLAN=[
+{phase:"Days 1–30 · Reposition",items:[
+"Rewrite the CV using the four before-and-after lines on the CV tab",
+"Move the ₹74 lakh saving to the top of your achievements",
+"Change your LinkedIn headline to: Business Operations &amp; Program Management | PMO | Ex-Pfizer",
+"Update notice period and expected CTC on Naukri — recruiters filter hard on both",
+"Write out the five interview stories on the Interviews tab, out loud, until they're 90 seconds each"]},
+{phase:"Days 31–60 · Open doors",items:[
+"Enrol in Lean Six Sigma Green Belt (KPMG India or Benchmark)",
+"List 20 target firms from the Where to apply tab and find one contact at each",
+"Message 10 former colleagues who've moved out of pharma — ask for a conversation, not a job",
+"Create profiles on iimjobs and Instahyre; set alerts for Program Manager and Business Operations",
+"Contact two Mumbai search firms — Michael Page and ABC Consultants"]},
+{phase:"Days 61–90 · Convert",items:[
+"Apply to 5 roles a week — quality over volume, tailored to each JD's vocabulary",
+"Track every application, contact and outcome in one sheet",
+"Do two mock interviews with someone who'll be blunt with you",
+"Negotiate on total compensation, not base — ask for the variable and benefits breakdown",
+"Decline anything that isn't a real step up in title, brand or pay"]},
+{phase:"Months 4–24 · Compound",items:[
+"Once in the new role, log project work formally — you need 36 months documented for PMP",
+"Take PMP as soon as you're eligible",
+"Explore JBIMS part-time, and ask about employer sponsorship after a year of tenure",
+"Re-benchmark your salary at the 18-month mark against the ₹22–30 LPA band"]}];
+
+var QUIZ=[
+{q:"When a project goes sideways, what do you reach for first?",o:[
+{t:"A clear plan and a tracker to get everyone back on the same page",s:{program:2,bizops:1}},
+{t:"The data — I want to understand what actually broke",s:{consult:2,bizops:1}},
+{t:"The people — I get the right stakeholders in a room",s:{chief:2,program:1}}]},
+{q:"Which of these would you happily do every week for two years?",o:[
+{t:"Redesign a broken process until it runs clean",s:{bizops:2,consult:1}},
+{t:"Run the operating rhythm for a senior leader",s:{chief:2,program:1}},
+{t:"Ship a complex programme across five teams",s:{program:2,consult:1}}]},
+{q:"How do you feel about a 55-hour week and occasional travel?",o:[
+{t:"Fine, if the learning curve is steep",s:{consult:2,program:1}},
+{t:"I'd rather have predictable hours and grow steadily",s:{bizops:2,chief:1}},
+{t:"Depends entirely on the pay",s:{program:1,consult:1,bizops:1}}]},
+{q:"In two years, what would make you proudest?",o:[
+{t:"A title with “Manager” in it and a team",s:{program:2,bizops:1}},
+{t:"A brand on my CV that opens every door after",s:{consult:2}},
+{t:"Being the person a leader can't operate without",s:{chief:2}}]},
+{q:"What's your honest feeling about starting slightly junior for a better brand?",o:[
+{t:"I'd do it — the brand pays for itself",s:{consult:2,program:1}},
+{t:"Only if the pay doesn't drop",s:{bizops:1,program:1,chief:1}},
+{t:"No — I've earned my level",s:{bizops:2,chief:1}}]}];
+
+var QUIZ_RESULT={
+program:{t:"Lead with Program Management",d:"You think in plans, dependencies and delivery. Put Program Manager at the top of your applications and treat Business Operations as your backup title. This is also the highest-paying of your realistic options."},
+consult:{t:"Lead with Operations Consulting",d:"You're drawn to problems and willing to pay in hours for the learning. Target Big 4 operations transformation and Accenture — and take the Six Sigma Green Belt before you apply, it's the credential that opens this door."},
+bizops:{t:"Lead with Business Operations",d:"You want to own a function and make it run properly. Business Operations Manager and PMO Lead roles at GCCs and consumer-tech firms are your shortest, cleanest path — and they pay well without demanding your weekends."},
+chief:{t:"Lead with Business Manager roles",d:"You're at your best next to a decision-maker. Target the Business Manager or Chief-of-Staff role in a bank's COO office or a GCC — but be specific in interviews that you want the programme-office version, not an executive assistant role."}};
+
+var PMP_CHECKS=[
+"I have at least 36 months of work where I planned, tracked and delivered something with a start, an end and stakeholders",
+"I can name at least three specific initiatives and describe my role in each",
+"I can find a manager or colleague who'd verify those initiatives if PMI audits me",
+"I can commit 6–8 hours a week for about three months"];
+
+var ROLE_TABLE=[
+["Business Operations Manager","Yes — strongest fit","No"],
+["PMO Analyst / PMO Lead","Yes — direct match","No"],
+["Program Manager","Yes, with the CV rewrite","No"],
+["Business Manager to a leader","Yes","Preferred, not required"],
+["Vendor / Category Operations","Yes — direct match","No"],
+["Client Services / Account Management","Yes","No"],
+["Ops &amp; Business Consulting (Big 4, Accenture)","Yes, off-campus","No"],
+["Strategy &amp; Ops at a tech firm","Possible, harder","Helps a lot"],
+["Boutique strategy consultant","Hard without case prep","Usually yes"],
+["MBB front-line consultant","Closed for now","Yes"]];
+
+/* ------------------------------------------------------------------ icons */
+function ic(p){return '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>';}
+var ICONS={
+start:ic('<circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>'),
+fit:ic('<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>'),
+apply:ic('<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/>'),
+earn:ic('<path d="M6 3h12M6 8h12M6 13l8.5 8M6 13h3M6 13c6 0 6-10 0-10"/>'),
+cv:ic('<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M8 13h8M8 17h5"/>'),
+skills:ic('<path d="m12 3 1.9 5.8L20 10l-5.4 2.8L13 19l-3-4.9L4 12l5.5-1.9Z"/>'),
+mba:ic('<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/>'),
+plan:ic('<path d="m3 7 2 2 4-4M3 15l2 2 4-4"/><path d="M13 7h8M13 17h8"/>'),
+chev:'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>',
+tick:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+plane:'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l3.9 4.4-2.1 2.1-1.9-.4a.5.5 0 0 0-.5.8L6 16l2.1 2.8a.5.5 0 0 0 .8-.5l-.4-1.9 2.1-2.1 4.4 3.9a.5.5 0 0 0 .8-.5Z"/></svg>',
+undo:'<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>'};
+
+var TABS=[["start","Start here"],["fit","Where you fit"],["apply","Where to apply"],["earn","What you'd earn"],
+["cv","CV &amp; interviews"],["skills","Upskilling"],["mba","The MBA question"],["plan","Your first 90 days"]];
+
+/* ------------------------------------------------------------------ state */
+var S={tab:"start",roleIdx:2,horizon:"entry",fCity:"all",fTrack:"all",hideMba:false,
+  openCv:0,openStar:null,qStep:0,qScore:{},pmp:[],done:[]};
+var KEY="sumedha-plan-v1";
+try{var raw=localStorage.getItem(KEY); if(raw){var d=JSON.parse(raw); if(d&&d.done)S.done=d.done; if(d&&d.pmp)S.pmp=d.pmp;}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({done:S.done,pmp:S.pmp}));}catch(e){}}
+
+function bar(lo,hi,max,tone){
+  return '<div class="bar-track"><div class="bar-fill" style="left:'+(lo/max*100)+'%;width:'+((hi-lo)/max*100)+'%;background:'+(tone==="now"?"#B9C4BC":"#7C9082")+'"></div></div>';}
+function chk(on,label,act,idx){
+  return '<div class="check" role="checkbox" tabindex="0" aria-checked="'+(on?"true":"false")+'" data-act="'+act+'" data-i="'+idx+'">'+
+    '<div class="box" data-on="'+(on?1:0)+'">'+(on?ICONS.tick:"")+'</div>'+
+    '<div class="check-t" data-on="'+(on?1:0)+'">'+label+'</div></div>';}
+
+/* --------------------------------------------------------------- sections */
+function secStart(){return ''+
+'<h2 class="sec serif">Start here</h2>'+
+'<p class="lede">Three things are true at once, and holding all three is the whole strategy.</p>'+
+'<div class="card"><h3 style="margin:0 0 8px">One · Your experience is real</h3><p class="muted">Cost savings, high-volume logistics, governance dashboards that leadership actually adopted. That is operations work at a scale most people four years in have never touched. You are not starting over.</p></div>'+
+'<div class="card"><h3 style="margin:0 0 8px">Two · Your CV hides it</h3><p class="muted">Right now the page reads as executive support. Recruiters scan for programme language — ownership, scale, outcomes — and yours is written in the language of assistance. Same work, wrong words. That is a two-hour fix, and it is the single highest-return thing on this page.</p></div>'+
+'<div class="card"><h3 style="margin:0 0 8px">Three · The pay gap is large, and in your favour</h3><p class="muted">You are at ₹8–9 LPA. The roles you already qualify for pay ₹14–20 LPA, and ₹22–30 LPA within two or three years. Most of that gap closes through repositioning, not more qualifications.</p></div>'+
+'<div class="note"><strong>What to do first.</strong> Take the five-question check on “Where you fit” to decide which job title to lead with. Then rewrite four CV lines on the “CV &amp; interviews” tab. Everything else can wait a week.</div>'+
+'<h3>What this plan does not recommend</h3><p class="muted small">Quitting to study full-time right now. Collecting certifications before you apply. Waiting until you feel ready. All three delay the thing that actually moves your salary, which is being in a non-pharma operations role with a programme title.</p>';}
+
+function secFit(){
+  var h='<h2 class="sec serif">Where you fit</h2><p class="lede">Five questions, sixty seconds. There are no wrong answers — this only decides which title goes at the top of your applications.</p>';
+  if(S.qStep<QUIZ.length){
+    var q=QUIZ[S.qStep];
+    h+='<div class="card"><div class="small muted" style="margin-bottom:12px">Question '+(S.qStep+1)+' of '+QUIZ.length+'</div>'+
+       '<h3 class="serif" style="margin:0 0 16px;font-size:19px">'+q.q+'</h3>';
+    q.o.forEach(function(o,i){h+='<button class="qbtn" data-act="ans" data-i="'+i+'">'+o.t+'</button>';});
+    h+='</div>';
+  } else {
+    var best=Object.keys(S.qScore).sort(function(a,b){return S.qScore[b]-S.qScore[a];})[0];
+    var r=QUIZ_RESULT[best];
+    h+='<div class="card" style="background:var(--sage-l);border:none"><div class="pill sage" style="margin-bottom:12px">Your result</div>'+
+       '<h3 class="serif" style="margin:0 0 10px;font-size:23px">'+r.t+'</h3>'+
+       '<p style="color:var(--sage-d)">'+r.d+'</p>'+
+       '<button class="link" data-act="requiz">'+ICONS.undo+' Take it again</button></div>';
+  }
+  h+='<h3>Every door, and whether it\'s open</h3><div class="tbl-wrap"><table><thead><tr><th>Role</th><th>Open to you now?</th><th>MBA needed?</th></tr></thead><tbody>';
+  ROLE_TABLE.forEach(function(r){
+    h+='<tr><td>'+r[0]+'</td><td style="color:'+(r[1].indexOf("Yes")===0?"var(--sage-d)":"var(--soft)")+'">'+r[1]+'</td><td class="muted">'+r[2]+'</td></tr>';});
+  h+='</tbody></table></div>';
+  h+='<div class="warn"><strong>One thing to prepare for.</strong> Your title says Consultant but the bullets describe coordination. A good interviewer will probe that gap. Don\'t be defensive about it — go in first: “The title was Associate Consultant; in practice I ran operations and governance for the commercial leadership team, and here\'s what I owned.” Then give a number.</div>';
+  return h;}
+
+function secApply(){
+  var list=FIRMS.filter(function(f){
+    return (S.fCity==="all"||f.c===S.fCity)&&(S.fTrack==="all"||f.t===S.fTrack)&&(!S.hideMba||!f.mba);
+  }).sort(function(a,b){return b.b[1]-a.b[1];});
+  var h='<h2 class="sec serif">Where to apply</h2><p class="lede">Twenty-seven firms that hire people with your profile. Filter it down to a shortlist, then find one human being at each.</p><div class="filters">';
+  [["all","Everywhere"],["Mumbai","Mumbai"],["Pan-India","Pan-India"]].forEach(function(x){
+    h+='<button class="chip" data-on="'+(S.fCity===x[0]?1:0)+'" data-act="city" data-v="'+x[0]+'">'+x[1]+'</button>';});
+  h+='<span style="width:10px"></span>';
+  [["all","All tracks"],["consulting","Consulting"],["corporate","Tech &amp; corporate"]].forEach(function(x){
+    h+='<button class="chip" data-on="'+(S.fTrack===x[0]?1:0)+'" data-act="track" data-v="'+x[0]+'">'+x[1]+'</button>';});
+  h+='<span style="width:10px"></span><button class="chip" data-on="'+(S.hideMba?1:0)+'" data-act="mba">Hide MBA-gated</button></div>';
+  h+='<p class="small muted" style="margin-bottom:14px">Showing '+list.length+' of '+FIRMS.length+', highest band first.</p>';
+  if(!list.length)h+='<div class="card muted">No firms match those filters. Try widening one.</div>';
+  list.forEach(function(f){
+    h+='<div class="firm"><div><div class="firm-n">'+f.n+'</div><div class="small muted" style="margin-bottom:8px">'+f.note+'</div>'+
+      '<div class="tags"><span class="pill">'+f.c+'</span><span class="pill sage">'+f.lvl+'</span><span class="pill">'+f.i+'</span>'+
+      (f.mba?'<span class="pill amber">MBA usually needed</span>':'')+'</div></div>'+
+      '<div class="firm-pay">₹'+f.b[0]+'–'+f.b[1]+'L</div></div>';});
+  h+='<h3>How people actually get these jobs in India</h3><div class="card">'+
+    '<p class="small"><strong>Referrals</strong> — by far the highest hit rate. Ten honest conversations beat a hundred cold applications.</p>'+
+    '<p class="small"><strong>iimjobs</strong> — where mid-management operations and consulting roles are posted. Your first stop.</p>'+
+    '<p class="small"><strong>Naukri</strong> — essential for corporate, GCC and BFSI roles. Keep notice period and expected CTC current; recruiters filter on both.</p>'+
+    '<p class="small"><strong>Instahyre and Hirist</strong> — curated, tilted towards tech and startups.</p>'+
+    '<p class="small"><strong>Search firms</strong> — Michael Page, ABC Consultants, Antal, Randstad and Adecco all run Mumbai mid-management mandates.</p></div>';
+  h+='<div class="warn"><strong>Your notice period is the friction.</strong> Pfizer is likely 60–90 days, and fast-moving firms prefer joiners inside 30. Say it upfront, ask whether a buyout is possible, and lean towards large MNCs and GCCs — they are used to 90-day notices and won\'t drop you for it. Expect four to eight months of searching on top of that, so start now rather than after the certifications.</div>';
+  h+='<h3 style="display:flex;align-items:center;gap:8px">'+ICONS.plane+' If you want to leave India</h3><div class="card">'+
+    '<p class="small"><strong>The route that actually works:</strong> join a global firm or GCC in India — Accenture, JPMorgan, Amazon, a large bank — do two or three strong years, then move internally to Dubai, Singapore or London. Lowest risk, and the company handles the visa.</p>'+
+    '<p class="small"><strong>Dubai directly</strong> is possible with sponsorship; mid-level operations roles run AED 8,000–20,000 a month, tax-free. <strong>Singapore</strong> is selective and much easier after a brand-name India stint.</p>'+
+    '<p class="small"><strong>Canada</strong> is realistic but it\'s a PR route, not a job route — your three-year BMS generally assesses fine through WES, and you\'d need IELTS plus a competitive CRS score. Treat it as a life decision, not a career move.</p>'+
+    '<p class="small muted"><strong>Germany, the UK and Australia</strong> are weak fits for your profile right now — they\'re gated on sponsorship, salary thresholds or technical shortage roles. Don\'t spend time there yet.</p></div>';
+  return h;}
+
+function secEarn(){
+  var r=ROLES[S.roleIdx], b=S.horizon==="entry"?r.entry:r.later;
+  var lo=Math.round((b[0]/CURRENT-1)*100), hi=Math.round((b[1]/CURRENT-1)*100);
+  return '<h2 class="sec serif">What you\'d earn</h2><p class="lede">Drag through the roles you qualify for and see the honest band against where you are today.</p>'+
+  '<div class="card"><input type="range" min="0" max="'+(ROLES.length-1)+'" value="'+S.roleIdx+'" data-act="role" aria-label="Choose a role">'+
+  '<div class="serif" style="font-size:21px;margin-bottom:4px">'+r.name+'</div><p class="small muted">'+r.why+'</p>'+
+  '<div class="filters" style="margin:18px 0 6px">'+
+  '<button class="chip" data-on="'+(S.horizon==="entry"?1:0)+'" data-act="hz" data-v="entry">What you could get now</button>'+
+  '<button class="chip" data-on="'+(S.horizon==="later"?1:0)+'" data-act="hz" data-v="later">In 2–3 years</button></div>'+
+  '<div class="big">₹'+b[0]+'–'+b[1]+' lakh</div>'+bar(b[0],b[1],34,"t")+
+  '<div class="small muted" style="margin-bottom:18px">That\'s '+lo+'–'+hi+'% above where you are today.</div>'+
+  '<div class="small muted">Where you are now · ₹'+CURRENT+' lakh</div>'+bar(7.5,9.5,34,"now")+
+  '<div class="small" style="color:var(--faint);display:flex;justify-content:space-between"><span>₹0</span><span>₹17L</span><span>₹34L</span></div></div>'+
+  '<div class="note"><strong>Negotiating.</strong> Ask for total compensation, not base — get the variable, the joining bonus and the benefits in writing before you compare offers. And treat ₹14 lakh as your floor, not your hope: a domain switch is the one moment in a career where a large jump is normal and expected.</div>'+
+  '<h3>What moves you up the band</h3><div class="card">'+
+  '<p class="small"><strong>Metro premium.</strong> Mumbai and Bengaluru pay 15–30% above smaller cities for the same role.</p>'+
+  '<p class="small"><strong>Firm type.</strong> Consumer tech and fintech pay most; IT services pay least. GCCs sit comfortably in between with far better hours.</p>'+
+  '<p class="small"><strong>Title on arrival.</strong> Entering as Manager rather than Senior Analyst is worth more over five years than any certification you can buy.</p>'+
+  '<p class="small"><strong>Six Sigma.</strong> Worth roughly ₹1–3 lakh on an operations offer, and it costs ₹23,000.</p></div>'+
+  '<p class="small muted">Bands are 2026 market estimates from Glassdoor India, AmbitionBox, Levels.fyi, Payscale and Indeed. Treat them as directional — individual offers vary widely with the firm and with how you negotiate.</p>';}
+
+function secCv(){
+  var p=CV_PAIRS[S.openCv];
+  var h='<h2 class="sec serif">CV &amp; interviews</h2><p class="lede">Nothing here changes what you did. It changes how it reads to someone scanning for eight seconds.</p><div class="filters">';
+  CV_PAIRS.forEach(function(_,i){h+='<button class="chip" data-on="'+(S.openCv===i?1:0)+'" data-act="cv" data-i="'+i+'">Line '+(i+1)+'</button>';});
+  h+='</div><div class="ba"><div class="ba-box ba-before"><div class="ba-tag">What\'s on the CV now</div>'+p.before+'</div>'+
+     '<div class="ba-box ba-after"><div class="ba-tag">What it should say</div>'+p.after+'</div></div>'+
+     '<div class="note" style="margin-top:12px">'+p.why+'</div>';
+  h+='<h3>Four rules for the rewrite</h3><div class="card">'+
+   '<p class="small"><strong>One number per line.</strong> If a bullet has no number, either find one or cut the bullet.</p>'+
+   '<p class="small"><strong>Start with a verb you\'d defend.</strong> Led, built, reduced, designed, owned. Not supported, assisted, coordinated-with.</p>'+
+   '<p class="small"><strong>Name the altitude, not a bigger title.</strong> “Worked with BU-head-level leadership” is true and impressive. Inflating your own title is neither.</p>'+
+   '<p class="small"><strong>Mirror the job description.</strong> If the posting says operating rhythm, steering committee or RAID log, use those exact words where they honestly apply.</p></div>';
+  h+='<h3>Your LinkedIn</h3><div class="card"><p class="small">Headline: <strong>Business Operations &amp; Program Management | PMO | Stakeholder Management | Ex-Pfizer</strong></p>'+
+   '<p class="small">Fill the skills section with the exact terms above — Indian recruiters search on them. Set “open to work” to recruiters only. Comment thoughtfully on two posts a week in your target industry; visibility compounds quietly and costs you nothing.</p></div>';
+  h+='<h3>Five interviews you\'ll have, and what to say</h3>';
+  STAR.forEach(function(s,i){
+    var open=S.openStar===i;
+    h+='<button class="acc" data-act="star" data-i="'+i+'" data-open="'+(open?1:0)+'" aria-expanded="'+open+'"><span style="font-weight:500">'+s.q+'</span>'+ICONS.chev+'</button>';
+    if(open)h+='<div class="acc-body">'+s.a+'</div>';});
+  return h;}
+
+function secSkills(){
+  var h='<h2 class="sec serif">Upskilling</h2><p class="lede">You have real experience, so most certifications would be decoration. Two are worth your money. The rest of this list exists so you can stop wondering about them.</p>';
+  CERTS.forEach(function(c){
+    var cls=c.v==="do"?"pill sage":c.v==="skip"?"pill":"pill amber";
+    h+='<div class="card"><div style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:8px">'+
+      '<div><div style="font-weight:600">'+c.n+'</div><div class="small muted">'+c.prov+' · '+c.cost+' · '+c.time+'</div></div>'+
+      '<span class="'+cls+'">'+VERDICT[c.v]+'</span></div><p class="small muted">'+c.say+'</p></div>';});
+  h+='<h3>Are you eligible for PMP yet?</h3><p class="small muted" style="margin-bottom:14px">PMP is the highest-value certification available to you, and also the easiest to waste money on. Tick honestly.</p><div class="card">';
+  PMP_CHECKS.forEach(function(c,i){h+=chk(S.pmp.indexOf(i)>-1,c,"pmp",i);});
+  h+='</div>';
+  if(S.pmp.length===PMP_CHECKS.length)
+    h+='<div class="note"><strong>You\'re ready.</strong> Book the 35-hour training and give yourself twelve weeks. Certified holders in India report meaningfully higher pay, and it\'s the credential that makes “Program Manager” read as obvious rather than aspirational.</div>';
+  else if(S.pmp.length>0)
+    h+='<div class="warn"><strong>Not yet — and that\'s fine.</strong> Take the Six Sigma Green Belt now, move into a role where you formally own projects, and log them as you go. You\'ll clear the PMP bar within a year, and it\'ll cost you nothing to wait.</div>';
+  return h;}
+
+function secMba(){
+  var h='<h2 class="sec serif">The MBA question</h2><p class="lede">Worth doing for one specific reason: if you want front-line strategy consulting or a full reset of your brand ceiling. Not worth doing if your goal is programme and operations management — you can get there without the debt.</p>';
+  h+='<h3>One-year, full-time</h3><div class="tbl-wrap"><table><thead><tr><th>Programme</th><th>Needs</th><th>Fees</th><th>Outcome</th></tr></thead><tbody>';
+  MBA_FULL.forEach(function(m){
+    h+='<tr><td><div style="font-weight:500">'+m.n+'</div><div class="small" style="color:'+(m.fit==="best"?"var(--sage-d)":"var(--faint)")+'">'+m.note+'</div></td>'+
+      '<td class="muted">'+m.exp+'</td><td class="muted">'+m.fee+'</td><td class="muted">'+m.out+'</td></tr>';});
+  h+='</tbody></table></div>';
+  h+='<div class="note"><strong>SPJIMR is your best full-time option.</strong> It\'s in Mumbai, it takes three years of experience rather than five, admissions weigh your profile rather than only your score, and ₹22.66 lakh against ₹24–26 LPA outcomes is a defensible trade. ISB and IIMA PGPX are genuine stretches — reachable with a strong GMAT, but you\'d be applying below the cohort norm.</div>';
+  h+='<h3>Part-time, while you keep working</h3><div class="tbl-wrap"><table><thead><tr><th>Programme</th><th>Fees</th><th>Schedule</th></tr></thead><tbody>';
+  MBA_PART.forEach(function(m){
+    var col=m.fit==="best"?"var(--sage-d)":m.fit==="weak"?"var(--faint)":"var(--soft)";
+    h+='<tr><td><div style="font-weight:500">'+m.n+'</div><div class="small" style="color:'+col+'">'+m.note+'</div></td>'+
+      '<td class="muted">'+m.fee+'</td><td class="muted">'+m.sched+'</td></tr>';});
+  h+='</tbody></table></div>';
+  h+='<div class="note"><strong>If you do one part-time MBA, do JBIMS.</strong> ₹1.89 lakh total, a real Mumbai brand, and no salary sacrificed. It is the only part-time option in the city with genuine switching power. Everything else on that list is a credential, not a lever.</div>';
+  h+='<h3>Should you tell employers you\'re doing one?</h3><div class="card">'+
+   '<p class="small">Using it as a signal — “I\'m pursuing an MBA and can continue it alongside the role” — cuts both ways, and it\'s worth knowing which way before you say it in an interview.</p>'+
+   '<p class="small"><strong>It helps</strong> with lateral hires, where it reads as ambition and reinforces that you\'re serious about moving up rather than just moving out.</p>'+
+   '<p class="small"><strong>It hurts</strong> in two ways. Some hiring managers read it as flight risk — someone studying is someone preparing to leave. And weekend or evening classes collide with the exact roles you want, so “will you be available?” becomes a real question. Answer it before they ask it: say concretely how you\'ll manage both.</p>'+
+   '<p class="small"><strong>On sponsorship:</strong> don\'t count on it early. Indian employers who fund MBAs usually require a year or two of tenure and attach a service bond — Infosys reimburses up to ₹1 lakh with a one-year commitment, TCS wants roughly two years\' tenure first. Get the job, do a year well, then ask.</p></div>';
+  h+='<div class="warn"><strong>The sequencing that makes sense.</strong> Pivot out of pharma first. Land the programme or operations role. Then, once you\'re settled and possibly sponsored, add JBIMS in the evenings. Doing it in that order means the degree builds on a better job rather than substituting for one — and you don\'t spend a year of salary finding that out.</div>';
+  return h;}
+
+function secPlan(){
+  var total=0; PLAN.forEach(function(p){total+=p.items.length;});
+  var pct=Math.round(S.done.length/total*100);
+  var h='<h2 class="sec serif">Your first 90 days</h2><p class="lede">Everything above, in the order it should happen. Tick things off — it saves in this browser, so you can close the page and come back.</p>';
+  h+='<div class="card"><div style="display:flex;justify-content:space-between;align-items:baseline">'+
+    '<span class="serif" style="font-size:21px">'+S.done.length+' of '+total+' done</span><span class="small muted">'+pct+'%</span></div>'+
+    '<div class="prog"><i style="width:'+pct+'%"></i></div>'+
+    (pct===100?'<div class="small" style="color:var(--sage-d)">All of it. Go and negotiate hard.</div>':'')+'</div>';
+  PLAN.forEach(function(p){
+    h+='<div style="margin-top:26px"><h3 style="margin-top:0">'+p.phase+'</h3><div class="card">';
+    p.items.forEach(function(it){h+=chk(S.done.indexOf(it)>-1,it,"todo",encodeURIComponent(it));});
+    h+='</div></div>';});
+  h+='<h3>How to know it\'s working</h3><div class="card">'+
+   '<p class="small"><strong>Three or more interview calls a month</strong> — the repositioning worked. Don\'t touch the MBA question.</p>'+
+   '<p class="small"><strong>Fewer than one a month after six weeks</strong> — the CV still reads as support work. Go back and sharpen the programme language before you apply anywhere else.</p>'+
+   '<p class="small"><strong>An offer at or below ₹12 lakh</strong> — negotiate, and be willing to walk. You have a stronger record than that number implies.</p></div>';
+  h+='<div class="note">Four years in, with a cost-savings record and a leadership team that relied on you. The hard part was never the capability. It\'s just the paperwork now.</div>';
+  return h;}
+
+var SECTIONS={start:secStart,fit:secFit,apply:secApply,earn:secEarn,cv:secCv,skills:secSkills,mba:secMba,plan:secPlan};
+
+/* ----------------------------------------------------------------- render */
+function render(){
+  document.getElementById("rail").innerHTML=TABS.map(function(t){
+    return '<button data-on="'+(S.tab===t[0]?1:0)+'" data-act="tab" data-v="'+t[0]+'">'+ICONS[t[0]]+' '+t[1]+'</button>';}).join("");
+  document.getElementById("main").innerHTML=SECTIONS[S.tab]();
+}
+
+document.addEventListener("click",function(e){
+  var el=e.target.closest("[data-act]"); if(!el)return;
+  var a=el.getAttribute("data-act"), v=el.getAttribute("data-v"), i=el.getAttribute("data-i");
+  if(a==="tab"){S.tab=v;window.scrollTo({top:0,behavior:"smooth"});}
+  else if(a==="city"){S.fCity=v;}
+  else if(a==="track"){S.fTrack=v;}
+  else if(a==="mba"){S.hideMba=!S.hideMba;}
+  else if(a==="hz"){S.horizon=v;}
+  else if(a==="cv"){S.openCv=+i;}
+  else if(a==="star"){S.openStar=(S.openStar===+i)?null:+i;}
+  else if(a==="ans"){var sc=QUIZ[S.qStep].o[+i].s;
+    for(var k in sc){S.qScore[k]=(S.qScore[k]||0)+sc[k];} S.qStep++;}
+  else if(a==="requiz"){S.qStep=0;S.qScore={};}
+  else if(a==="pmp"){var n=+i; var p=S.pmp.indexOf(n); if(p>-1)S.pmp.splice(p,1); else S.pmp.push(n); save();}
+  else if(a==="todo"){var t=decodeURIComponent(i); var q=S.done.indexOf(t); if(q>-1)S.done.splice(q,1); else S.done.push(t); save();}
+  else return;
+  render();
+});
+document.addEventListener("keydown",function(e){
+  if(e.key!==" "&&e.key!=="Enter")return;
+  var el=e.target.closest('[role=checkbox]'); if(!el)return;
+  e.preventDefault(); el.click();
+});
+document.addEventListener("input",function(e){
+  if(e.target.getAttribute("data-act")==="role"){S.roleIdx=+e.target.value;render();
+    var s=document.querySelector('[data-act="role"]'); if(s)s.focus();}
+});
+render();
+</script>
+</body>
+</html>
