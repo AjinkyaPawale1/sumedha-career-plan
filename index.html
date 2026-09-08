@@ -37,7 +37,7 @@ button{font:inherit;}
 .rail{position:sticky;top:24px;display:flex;flex-direction:column;gap:2px;}
 .rail button{display:flex;align-items:center;gap:10px;background:none;border:none;cursor:pointer;
   font-size:14px;color:var(--soft);text-align:left;padding:9px 12px;border-radius:9px;width:100%;
-  transition:background .15s,color .15s;}
+  transition:background .15s,color .15s;scroll-margin-top:12px;}
 .rail button:hover{background:var(--sage-l);color:var(--ink);}
 .rail button[data-on="1"]{background:var(--sage-l);color:var(--sage-d);font-weight:500;}
 button:focus-visible,input:focus-visible,[role=checkbox]:focus-visible{outline:2px solid var(--sage);outline-offset:2px;}
@@ -564,7 +564,8 @@ function render(){
 document.addEventListener("click",function(e){
   var el=e.target.closest("[data-act]"); if(!el)return;
   var a=el.getAttribute("data-act"), v=el.getAttribute("data-v"), i=el.getAttribute("data-i");
-  if(a==="tab"){S.tab=v;window.scrollTo({top:0,behavior:"smooth"});}
+  var isTab=a==="tab";
+  if(a==="tab"){S.tab=v;}
   else if(a==="city"){S.fCity=v;}
   else if(a==="track"){S.fTrack=v;}
   else if(a==="mba"){S.hideMba=!S.hideMba;}
@@ -578,6 +579,10 @@ document.addEventListener("click",function(e){
   else if(a==="todo"){var t=decodeURIComponent(i); var q=S.done.indexOf(t); if(q>-1)S.done.splice(q,1); else S.done.push(t); save();}
   else return;
   render();
+  if(isTab){
+    var active=document.querySelector('#rail [data-on="1"]');
+    if(active)active.scrollIntoView({behavior:"smooth",block:"start",inline:"center"});
+  }
 });
 document.addEventListener("keydown",function(e){
   if(e.key!==" "&&e.key!=="Enter")return;
