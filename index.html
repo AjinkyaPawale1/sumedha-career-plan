@@ -50,7 +50,8 @@ button:focus-visible,input:focus-visible,[role=checkbox]:focus-visible{outline:2
 }
 
 h2.sec{font-size:clamp(25px,3.6vw,32px);margin:0 0 10px;}
-.lede{font-size:16.5px;color:var(--soft);max-width:64ch;margin:0 0 30px;}
+.lede{font-size:16.5px;color:var(--soft);max-width:64ch;margin:0 0 14px;}
+.howto{font-size:13px;color:var(--faint);max-width:64ch;margin:0 0 28px;line-height:1.55;}
 h3{font-size:17px;margin:36px 0 12px;font-weight:600;}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:12px;box-shadow:0 1px 2px rgba(42,51,48,.03);}
 .note{background:var(--sage-l);border-radius:14px;padding:18px 22px;margin:24px 0;font-size:14.5px;color:var(--sage-d);}
@@ -67,11 +68,20 @@ h3{font-size:17px;margin:36px 0 12px;font-weight:600;}
   background:var(--panel);color:var(--soft);transition:all .15s;}
 .chip[data-on="1"]{background:var(--sage-d);border-color:var(--sage-d);color:#fff;}
 
-.firm{display:flex;justify-content:space-between;gap:18px;background:var(--panel);border:1px solid var(--line);
-  border-radius:14px;padding:17px 20px;margin-bottom:9px;}
-.firm-n{font-weight:600;font-size:15px;margin-bottom:3px;}
+.firm{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px 20px;margin-bottom:9px;}
+.firm-row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:6px;}
+.firm-n{font-weight:600;font-size:15px;}
 .firm-pay{font-family:'Newsreader',serif;font-size:19px;color:var(--sage-d);white-space:nowrap;font-variant-numeric:oldstyle-nums;}
 .tags{display:flex;gap:6px;flex-wrap:wrap;}
+.firm-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 14px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);}
+.firm-meta div{font-size:12.5px;color:var(--soft);line-height:1.45;}
+.firm-meta strong{display:block;font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.04em;font-weight:600;margin-bottom:2px;}
+@media(max-width:640px){
+  .firm-meta{grid-template-columns:1fr;gap:8px;}
+}
+@media(max-width:480px){
+  .firm-pay{font-size:17px;}
+}
 
 .bar-track{position:relative;height:12px;background:#F1F3F1;border-radius:999px;margin:8px 0;}
 .bar-fill{position:absolute;top:0;height:12px;border-radius:999px;transition:all .4s cubic-bezier(.2,.7,.3,1);}
@@ -150,33 +160,33 @@ var ROLES=[
 var CURRENT=8.5;
 
 var FIRMS=[
-{n:"Deloitte India",t:"consulting",c:"Mumbai",mba:false,b:[13,17],i:"Intense",lvl:"Consultant",note:"Target Operations Transformation or Enterprise PMO, not the life sciences practice."},
-{n:"EY India",t:"consulting",c:"Mumbai",mba:false,b:[12,18],i:"Intense",lvl:"Consultant / Senior Consultant",note:"Business Consulting and PMO groups hire laterally without an MBA."},
-{n:"KPMG India",t:"consulting",c:"Mumbai",mba:false,b:[12,17],i:"Intense",lvl:"Consultant",note:"Also runs the Six Sigma course worth taking, a useful way in."},
-{n:"PwC India",t:"consulting",c:"Mumbai",mba:false,b:[12,17],i:"Intense",lvl:"Senior Associate",note:"Operations transformation work maps closely to your cost-savings record."},
-{n:"Accenture (Strategy &amp; Consulting / Operations)",t:"consulting",c:"Mumbai",mba:false,b:[15,22],i:"Intense",lvl:"Consultant",note:"Mumbai and Pune. Strong brand, strong internal mobility abroad later."},
-{n:"Genpact",t:"consulting",c:"Mumbai",mba:false,b:[12,18],i:"Steady",lvl:"Manager",note:"Operations transformation is their core. One of your best culture-to-skill fits."},
-{n:"WNS",t:"consulting",c:"Mumbai",mba:false,b:[11,17],i:"Steady",lvl:"Manager",note:"Process and delivery management, Mumbai headquartered."},
-{n:"Capgemini Invent",t:"consulting",c:"Pan-India",mba:false,b:[12,18],i:"Steady",lvl:"Consultant",note:"Mumbai and Pune presence."},
-{n:"Grant Thornton Bharat",t:"consulting",c:"Mumbai",mba:false,b:[10,16],i:"Balanced",lvl:"Consultant",note:"Mid-tier, more balanced hours than Big 4."},
-{n:"BDO India / Protiviti",t:"consulting",c:"Mumbai",mba:false,b:[10,16],i:"Balanced",lvl:"Consultant",note:"Good stepping stone if Big 4 says no on the first pass."},
-{n:"Infosys / TCS / Wipro / LTIMindtree Consulting",t:"consulting",c:"Pan-India",mba:false,b:[10,16],i:"Steady",lvl:"Consultant",note:"Process-heavy but a reliable route into a consulting title."},
-{n:"Praxis Global Alliance",t:"consulting",c:"Mumbai",mba:false,b:[12,18],i:"Intense",lvl:"Consultant",note:"Early client ownership and a steep curve. Hours are the trade-off."},
-{n:"Redseer / Avalon / Technopak",t:"consulting",c:"Mumbai",mba:true,b:[10,16],i:"Intense",lvl:"Consultant",note:"Research-heavy strategy shops; usually want an MBA or case prep."},
-{n:"Bain Capability Network",t:"consulting",c:"Pan-India",mba:false,b:[16,21],i:"Intense",lvl:"Associate",note:"Real non-MBA entry path, but Gurugram and Bengaluru, not Mumbai."},
-{n:"BCG Knowledge Team / McKinsey Knowledge Centre",t:"consulting",c:"Pan-India",mba:false,b:[15,21],i:"Intense",lvl:"Analyst / Associate",note:"Analytical bar is high. Gurugram, Bengaluru, Chennai."},
-{n:"Alvarez &amp; Marsal India",t:"consulting",c:"Mumbai",mba:true,b:[18,25],i:"Intense",lvl:"Associate",note:"Turnaround work. Almost always MBA-gated at associate level."},
-{n:"Kearney India",t:"consulting",c:"Mumbai",mba:true,b:[18,25],i:"Intense",lvl:"Business Analyst",note:"MBA-gated above analyst grade."},
-{n:"JPMorgan Chase (Mumbai)",t:"corporate",c:"Mumbai",mba:false,b:[15,24],i:"Steady",lvl:"Business Manager / Ops Manager",note:"Huge Mumbai footprint, structured career paths, strong maternity policy."},
-{n:"Morgan Stanley (Mumbai)",t:"corporate",c:"Mumbai",mba:false,b:[15,24],i:"Steady",lvl:"Business Manager",note:"COO-office roles are a near-perfect match for your current work."},
-{n:"Deutsche Bank / Barclays / Nomura / UBS / BNP (Mumbai)",t:"corporate",c:"Mumbai",mba:false,b:[14,22],i:"Steady",lvl:"Ops / Change Manager",note:"Large Mumbai GCCs, safe transport, women's networks."},
-{n:"HDFC / ICICI / Kotak / Axis",t:"corporate",c:"Mumbai",mba:false,b:[12,20],i:"Steady",lvl:"Program / Change Manager",note:"Hierarchical but stable, and Mumbai-headquartered."},
-{n:"Google / Microsoft / Adobe / Salesforce India",t:"corporate",c:"Pan-India",mba:false,b:[16,24],i:"Steady",lvl:"Program Manager / Business Ops",note:"Programme roles hire non-MBAs. Mostly Bengaluru and Hyderabad."},
-{n:"Amazon India",t:"corporate",c:"Pan-India",mba:false,b:[16,24],i:"Intense",lvl:"Program Manager",note:"Your logistics-coordination record reads well here. High intensity."},
-{n:"Uber / Swiggy / Zomato / Zepto (City &amp; Central Ops)",t:"corporate",c:"Mumbai",mba:false,b:[15,26],i:"Intense",lvl:"Ops / Program Manager",note:"City ops is among the best-paying mid-level operations work in India."},
-{n:"Nykaa / Dream11 / Tata Digital / Jio",t:"corporate",c:"Mumbai",mba:false,b:[14,24],i:"Steady",lvl:"Business Ops / Program Manager",note:"Mumbai-based consumer tech: the shortest commute-to-ceiling combination."},
-{n:"Razorpay / CRED / PhonePe / Groww / Meesho",t:"corporate",c:"Pan-India",mba:false,b:[15,28],i:"Intense",lvl:"Business Ops Manager",note:"Equity upside, flat structures, less job security."},
-{n:"HUL / Marico / Godrej / Tata Consumer / Nestlé",t:"corporate",c:"Mumbai",mba:false,b:[14,24],i:"Steady",lvl:"Ops / Supply Chain Manager",note:"Six Sigma is genuinely valued here. Brand roles prefer an MBA; ops roles don't."}];
+{n:"Deloitte India",t:"consulting",c:"Mumbai",mba:false,b:[13,17],i:"Intense",lvl:"Consultant",note:"Target Operations Transformation or Enterprise PMO, not the life sciences practice.",culture:"Hierarchical, up-or-out; strong peer network",wlb:"Long hours in busy season, calmer off-cycle",growth:"Fast titles, steep curve, high attrition after 2-3 yrs"},
+{n:"EY India",t:"consulting",c:"Mumbai",mba:false,b:[12,18],i:"Intense",lvl:"Consultant / Senior Consultant",note:"Business Consulting and PMO groups hire laterally without an MBA.",culture:"Collegial but competitive, Big 4 norms",wlb:"Client-dependent, sharp busy-season spikes",growth:"Quick promotions if you deliver, strong alumni network"},
+{n:"KPMG India",t:"consulting",c:"Mumbai",mba:false,b:[12,17],i:"Intense",lvl:"Consultant",note:"Also runs the Six Sigma course worth taking, a useful way in.",culture:"Team-oriented, less cutthroat than peers",wlb:"Eases up noticeably after Consultant level",growth:"Process-specialism niches open steady paths up"},
+{n:"PwC India",t:"consulting",c:"Mumbai",mba:false,b:[12,17],i:"Intense",lvl:"Senior Associate",note:"Operations transformation work maps closely to your cost-savings record.",culture:"Structured, process-heavy, fairly hierarchical",wlb:"Intense during audit and transformation cycles",growth:"Reliable ladder, and a strong brand for your next move"},
+{n:"Accenture (Strategy &amp; Consulting / Operations)",t:"consulting",c:"Mumbai",mba:false,b:[15,22],i:"Intense",lvl:"Consultant",note:"Mumbai and Pune. Strong brand, strong internal mobility abroad later.",culture:"Large, matrixed, genuinely global exposure",wlb:"Project-dependent, can run demanding for stretches",growth:"Strong internal mobility, real shot at a global rotation"},
+{n:"Genpact",t:"consulting",c:"Mumbai",mba:false,b:[12,18],i:"Steady",lvl:"Manager",note:"Operations transformation is their core. One of your best culture-to-skill fits.",culture:"Delivery-first, operations-led, less prestige-chasing",wlb:"Closer to a steady 9-to-6 rhythm than Big 4",growth:"Steady, tied to tenure and delivery metrics"},
+{n:"WNS",t:"consulting",c:"Mumbai",mba:false,b:[11,17],i:"Steady",lvl:"Manager",note:"Process and delivery management, Mumbai headquartered.",culture:"Structured, BPO-adjacent, process-first",wlb:"Predictable hours, few extreme swings",growth:"Slower than consulting brands, but genuinely stable"},
+{n:"Capgemini Invent",t:"consulting",c:"Pan-India",mba:false,b:[12,18],i:"Steady",lvl:"Consultant",note:"Mumbai and Pune presence.",culture:"Consulting-lite, more relaxed than Big 4",wlb:"Moderate, rarely always-on like MBB",growth:"Decent, with access to Capgemini's global network"},
+{n:"Grant Thornton Bharat",t:"consulting",c:"Mumbai",mba:false,b:[10,16],i:"Balanced",lvl:"Consultant",note:"Mid-tier, more balanced hours than Big 4.",culture:"Less political, more collegial than Big 4",wlb:"Genuinely better hours for the pay band",growth:"Slower brand payoff, but real client exposure"},
+{n:"BDO India / Protiviti",t:"consulting",c:"Mumbai",mba:false,b:[10,16],i:"Balanced",lvl:"Consultant",note:"Good stepping stone if Big 4 says no on the first pass.",culture:"Collegial, mid-tier, lower internal politics",wlb:"Balanced pace, a real step down from Big 4 intensity",growth:"Modest, but a legitimate stepping stone upward"},
+{n:"Infosys / TCS / Wipro / LTIMindtree Consulting",t:"consulting",c:"Pan-India",mba:false,b:[10,16],i:"Steady",lvl:"Consultant",note:"Process-heavy but a reliable route into a consulting title.",culture:"Large-company, process-heavy, hierarchical",wlb:"Predictable hours, rarely extreme",growth:"Slow but very stable, appraisal-cycle driven"},
+{n:"Praxis Global Alliance",t:"consulting",c:"Mumbai",mba:false,b:[12,18],i:"Intense",lvl:"Consultant",note:"Early client ownership and a steep curve. Hours are the trade-off.",culture:"Boutique, high-ownership, low bureaucracy",wlb:"Intense; early ownership is the trade-off",growth:"Fast if you perform, though with less brand cushion"},
+{n:"Redseer / Avalon / Technopak",t:"consulting",c:"Mumbai",mba:true,b:[10,16],i:"Intense",lvl:"Consultant",note:"Research-heavy strategy shops; usually want an MBA or case prep.",culture:"Research-heavy, analytical, rigorous",wlb:"Intense during pitch and project cycles",growth:"Good if you want strategy-shop pedigree on your CV"},
+{n:"Bain Capability Network",t:"consulting",c:"Pan-India",mba:false,b:[16,21],i:"Intense",lvl:"Associate",note:"Real non-MBA entry path, but Gurugram and Bengaluru, not Mumbai.",culture:"High-performance, MBB-adjacent standards",wlb:"Intense but more structured shift patterns than client-facing MBB",growth:"Excellent brand value, real path towards MBB-caliber roles"},
+{n:"BCG Knowledge Team / McKinsey Knowledge Centre",t:"consulting",c:"Pan-India",mba:false,b:[15,21],i:"Intense",lvl:"Analyst / Associate",note:"Analytical bar is high. Gurugram, Bengaluru, Chennai.",culture:"Analytical, high-bar, prestige-driven",wlb:"Intense, deadline-led work",growth:"Best-in-class brand and exit opportunities"},
+{n:"Alvarez &amp; Marsal India",t:"consulting",c:"Mumbai",mba:true,b:[18,25],i:"Intense",lvl:"Associate",note:"Turnaround work. Almost always MBA-gated at associate level.",culture:"Results-obsessed, frequently crisis-mode",wlb:"Demanding; turnaround work rarely slows down",growth:"Very fast if you can handle the stress; strong pay growth"},
+{n:"Kearney India",t:"consulting",c:"Mumbai",mba:true,b:[18,25],i:"Intense",lvl:"Business Analyst",note:"MBA-gated above analyst grade.",culture:"Prestige-driven, competitive",wlb:"Intense, travel-heavy",growth:"Strong once you clear the MBA-gated ceiling"},
+{n:"JPMorgan Chase (Mumbai)",t:"corporate",c:"Mumbai",mba:false,b:[15,24],i:"Steady",lvl:"Business Manager / Ops Manager",note:"Huge Mumbai footprint, structured career paths, strong maternity policy.",culture:"Structured, process-heavy, strong DEI programmes",wlb:"Steady; respects working hours more than most banks",growth:"Clear ladders, rewards long tenure"},
+{n:"Morgan Stanley (Mumbai)",t:"corporate",c:"Mumbai",mba:false,b:[15,24],i:"Steady",lvl:"Business Manager",note:"COO-office roles are a near-perfect match for your current work.",culture:"Professional; COO-office work is well-regarded internally",wlb:"Steady, generally predictable",growth:"Strong internal mobility across functions"},
+{n:"Deutsche Bank / Barclays / Nomura / UBS / BNP (Mumbai)",t:"corporate",c:"Mumbai",mba:false,b:[14,22],i:"Steady",lvl:"Ops / Change Manager",note:"Large Mumbai GCCs, safe transport, women's networks.",culture:"Global GCC culture, process-oriented",wlb:"Generally steady, though some desks run busier",growth:"Solid, especially on change and ops-management tracks"},
+{n:"HDFC / ICICI / Kotak / Axis",t:"corporate",c:"Mumbai",mba:false,b:[12,20],i:"Steady",lvl:"Program / Change Manager",note:"Hierarchical but stable, and Mumbai-headquartered.",culture:"Hierarchical, target-driven, classic Indian corporate",wlb:"Can get demanding around quarter-end",growth:"Fast if metrics-driven, though internal politics matter"},
+{n:"Google / Microsoft / Adobe / Salesforce India",t:"corporate",c:"Pan-India",mba:false,b:[16,24],i:"Steady",lvl:"Program Manager / Business Ops",note:"Programme roles hire non-MBAs. Mostly Bengaluru and Hyderabad.",culture:"Flat, engineering-first, strong perks",wlb:"Generally excellent, often remote-friendly",growth:"Slower titles, but outsized brand value and pay"},
+{n:"Amazon India",t:"corporate",c:"Pan-India",mba:false,b:[16,24],i:"Intense",lvl:"Program Manager",note:"Your logistics-coordination record reads well here. High intensity.",culture:"Leadership-principles-driven, high accountability",wlb:"Known for long hours, especially in ops roles",growth:"Fast if you can sustain the pace; strong PM pedigree"},
+{n:"Uber / Swiggy / Zomato / Zepto (City &amp; Central Ops)",t:"corporate",c:"Mumbai",mba:false,b:[15,26],i:"Intense",lvl:"Ops / Program Manager",note:"City ops is among the best-paying mid-level operations work in India.",culture:"Scrappy, high-ownership, fast decision cycles",wlb:"Intense, especially city ops during peak hours",growth:"Very fast titles, but with real volatility risk"},
+{n:"Nykaa / Dream11 / Tata Digital / Jio",t:"corporate",c:"Mumbai",mba:false,b:[14,24],i:"Steady",lvl:"Business Ops / Program Manager",note:"Mumbai-based consumer tech: the shortest commute-to-ceiling combination.",culture:"Founder energy at consumer brands, more corporate at Tata/Jio",wlb:"Moderate, steadier than pure-play startups",growth:"Good, especially if you join during a scale-up phase"},
+{n:"Razorpay / CRED / PhonePe / Groww / Meesho",t:"corporate",c:"Pan-India",mba:false,b:[15,28],i:"Intense",lvl:"Business Ops Manager",note:"Equity upside, flat structures, less job security.",culture:"Flat, equity-driven, high autonomy",wlb:"Intense, classic startup hours",growth:"Very fast if the company scales, but higher job-security risk"},
+{n:"HUL / Marico / Godrej / Tata Consumer / Nestlé",t:"corporate",c:"Mumbai",mba:false,b:[14,24],i:"Steady",lvl:"Ops / Supply Chain Manager",note:"Six Sigma is genuinely valued here. Brand roles prefer an MBA; ops roles don't.",culture:"Classic FMCG discipline, strong training culture",wlb:"Steady and predictable",growth:"Slower, but among the most respected training grounds on a CV"}];
 
 var CV_PAIRS=[
 {before:"Proactive execution and administrative support to senior leaders within commercial teams.",
@@ -335,6 +345,7 @@ function chk(on,label,act,idx){
 function secStart(){return ''+
 '<h2 class="sec serif">Start here</h2>'+
 '<p class="lede">Three things are true at once, and holding all three is the whole strategy.</p>'+
+'<p class="howto">How to read this: each numbered card names one truth about where you stand today, and the note underneath tells you exactly what to do about it first.</p>'+
 '<div class="card"><h3 style="margin:0 0 8px">One · Your experience is real</h3><p class="muted">Cost savings, high-volume logistics, governance dashboards that leadership actually adopted. That is operations work at a scale most people four years in have never touched. You are not starting over.</p></div>'+
 '<div class="card"><h3 style="margin:0 0 8px">Two · Your CV hides it</h3><p class="muted">Right now the page reads as executive support. Recruiters scan for programme language (ownership, scale, outcomes), and yours is written in the language of assistance. Same work, wrong words. That is a two-hour fix, and it is the single highest-return thing on this page.</p></div>'+
 '<div class="card"><h3 style="margin:0 0 8px">Three · The pay gap is large, and in your favour</h3><p class="muted">You are at ₹8–9 LPA. The roles you already qualify for pay ₹14–20 LPA, and ₹22–30 LPA within two or three years. Most of that gap closes through repositioning, not more qualifications.</p></div>'+
@@ -342,7 +353,8 @@ function secStart(){return ''+
 '<h3>What this plan does not recommend</h3><p class="muted small">Quitting to study full-time right now. Collecting certifications before you apply. Waiting until you feel ready. All three delay the thing that actually moves your salary, which is being in a non-pharma operations role with a programme title.</p>';}
 
 function secFit(){
-  var h='<h2 class="sec serif">Where you fit</h2><p class="lede">Five questions, sixty seconds. There are no wrong answers: this only decides which title goes at the top of your applications.</p>';
+  var h='<h2 class="sec serif">Where you fit</h2><p class="lede">Five questions, sixty seconds. There are no wrong answers: this only decides which title goes at the top of your applications.</p>'+
+  '<p class="howto">How to read this: answer the five questions below to get a recommended title, then use the table underneath it to see exactly which roles are open to you today and which still need an MBA.</p>';
   if(S.qStep<QUIZ.length){
     var q=QUIZ[S.qStep];
     h+='<div class="card"><div class="small muted" style="margin-bottom:12px">Question '+(S.qStep+1)+' of '+QUIZ.length+'</div>'+
@@ -368,7 +380,8 @@ function secApply(){
   var list=FIRMS.filter(function(f){
     return (S.fCity==="all"||f.c===S.fCity)&&(S.fTrack==="all"||f.t===S.fTrack)&&(!S.hideMba||!f.mba);
   }).sort(function(a,b){return b.b[1]-a.b[1];});
-  var h='<h2 class="sec serif">Where to apply</h2><p class="lede">Twenty-seven firms that hire people with your profile. Filter it down to a shortlist, then find one human being at each.</p><div class="filters">';
+  var h='<h2 class="sec serif">Where to apply</h2><p class="lede">Twenty-seven firms that hire people with your profile. Filter it down to a shortlist, then find one human being at each.</p>'+
+  '<p class="howto">How to read this: each card shows the realistic pay band top-right, tags for city, entry level and pace (an amber tag means an MBA is usually expected), and a Culture / Work-life / Growth strip at the bottom, general reputation, not a guarantee, so weigh it alongside your own conversations with people who work there.</p><div class="filters">';
   [["all","Everywhere"],["Mumbai","Mumbai"],["Pan-India","Pan-India"]].forEach(function(x){
     h+='<button class="chip" data-on="'+(S.fCity===x[0]?1:0)+'" data-act="city" data-v="'+x[0]+'">'+x[1]+'</button>';});
   h+='<span style="width:10px"></span>';
@@ -378,10 +391,11 @@ function secApply(){
   h+='<p class="small muted" style="margin-bottom:14px">Showing '+list.length+' of '+FIRMS.length+', highest band first.</p>';
   if(!list.length)h+='<div class="card muted">No firms match those filters. Try widening one.</div>';
   list.forEach(function(f){
-    h+='<div class="firm"><div><div class="firm-n">'+f.n+'</div><div class="small muted" style="margin-bottom:8px">'+f.note+'</div>'+
+    h+='<div class="firm"><div class="firm-row"><span class="firm-n">'+f.n+'</span><span class="firm-pay">₹'+f.b[0]+'–'+f.b[1]+'L</span></div>'+
+      '<div class="small muted" style="margin-bottom:8px">'+f.note+'</div>'+
       '<div class="tags"><span class="pill">'+f.c+'</span><span class="pill sage">'+f.lvl+'</span><span class="pill">'+f.i+'</span>'+
-      (f.mba?'<span class="pill amber">MBA usually needed</span>':'')+'</div></div>'+
-      '<div class="firm-pay">₹'+f.b[0]+'–'+f.b[1]+'L</div></div>';});
+      (f.mba?'<span class="pill amber">MBA usually needed</span>':'')+'</div>'+
+      '<div class="firm-meta"><div><strong>Culture</strong> '+f.culture+'</div><div><strong>Work-life</strong> '+f.wlb+'</div><div><strong>Growth</strong> '+f.growth+'</div></div></div>';});
   h+='<h3>How people actually get these jobs in India</h3><div class="card">'+
     '<p class="small"><strong>Referrals</strong>: by far the highest hit rate. Ten honest conversations beat a hundred cold applications.</p>'+
     '<p class="small"><strong>iimjobs</strong>: where mid-management operations and consulting roles are posted. Your first stop.</p>'+
@@ -400,6 +414,7 @@ function secEarn(){
   var r=ROLES[S.roleIdx], b=S.horizon==="entry"?r.entry:r.later;
   var lo=Math.round((b[0]/CURRENT-1)*100), hi=Math.round((b[1]/CURRENT-1)*100);
   return '<h2 class="sec serif">What you\'d earn</h2><p class="lede">Drag through the roles you qualify for and see the honest band against where you are today.</p>'+
+  '<p class="howto">How to read this: drag the slider to switch roles and toggle between now and 2 to 3 years. The long bar shows that role\'s pay band; the short bar beneath shows where you stand today, so the gap is easy to see.</p>'+
   '<div class="card"><input type="range" min="0" max="'+(ROLES.length-1)+'" value="'+S.roleIdx+'" data-act="role" aria-label="Choose a role">'+
   '<div class="serif" style="font-size:21px;margin-bottom:4px">'+r.name+'</div><p class="small muted">'+r.why+'</p>'+
   '<div class="filters" style="margin:18px 0 6px">'+
@@ -419,7 +434,8 @@ function secEarn(){
 
 function secCv(){
   var p=CV_PAIRS[S.openCv];
-  var h='<h2 class="sec serif">CV &amp; interviews</h2><p class="lede">Nothing here changes what you did. It changes how it reads to someone scanning for eight seconds.</p><div class="filters">';
+  var h='<h2 class="sec serif">CV &amp; interviews</h2><p class="lede">Nothing here changes what you did. It changes how it reads to someone scanning for eight seconds.</p>'+
+  '<p class="howto">How to read this: pick a numbered line below to see it before and after, and tap a question under Five interviews further down to reveal how to answer it.</p><div class="filters">';
   CV_PAIRS.forEach(function(_,i){h+='<button class="chip" data-on="'+(S.openCv===i?1:0)+'" data-act="cv" data-i="'+i+'">Line '+(i+1)+'</button>';});
   h+='</div><div class="ba"><div class="ba-box ba-before"><div class="ba-tag">What\'s on the CV now</div>'+p.before+'</div>'+
      '<div class="ba-box ba-after"><div class="ba-tag">What it should say</div>'+p.after+'</div></div>'+
@@ -439,7 +455,8 @@ function secCv(){
   return h;}
 
 function secSkills(){
-  var h='<h2 class="sec serif">Upskilling</h2><p class="lede">You have real experience, so most certifications would be decoration. Two are worth your money. The rest of this list exists so you can stop wondering about them.</p>';
+  var h='<h2 class="sec serif">Upskilling</h2><p class="lede">You have real experience, so most certifications would be decoration. Two are worth your money. The rest of this list exists so you can stop wondering about them.</p>'+
+  '<p class="howto">How to read this: each card carries a verdict badge, from Do this down to Skip, telling you exactly how much of your time and money it deserves.</p>';
   CERTS.forEach(function(c){
     var cls=c.v==="do"?"pill sage":c.v==="skip"?"pill":"pill amber";
     h+='<div class="card"><div style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:8px">'+
@@ -455,7 +472,8 @@ function secSkills(){
   return h;}
 
 function secMba(){
-  var h='<h2 class="sec serif">The MBA question</h2><p class="lede">Worth doing for one specific reason: if you want front-line strategy consulting or a full reset of your brand ceiling. Not worth doing if your goal is programme and operations management: you can get there without the debt.</p>';
+  var h='<h2 class="sec serif">The MBA question</h2><p class="lede">Worth doing for one specific reason: if you want front-line strategy consulting or a full reset of your brand ceiling. Not worth doing if your goal is programme and operations management: you can get there without the debt.</p>'+
+  '<p class="howto">How to read this: in the tables below, darker note text under a programme means it\'s a strong fit for you; lighter text means it\'s more of a stretch, or not the right one yet.</p>';
   h+='<h3>One-year, full-time</h3><div class="tbl-wrap"><table><thead><tr><th>Programme</th><th>Needs</th><th>Fees</th><th>Outcome</th></tr></thead><tbody>';
   MBA_FULL.forEach(function(m){
     h+='<tr><td><div style="font-weight:500">'+m.n+'</div><div class="small" style="color:'+(m.fit==="best"?"var(--sage-d)":"var(--faint)")+'">'+m.note+'</div></td>'+
@@ -480,7 +498,8 @@ function secMba(){
 function secPlan(){
   var total=0; PLAN.forEach(function(p){total+=p.items.length;});
   var pct=Math.round(S.done.length/total*100);
-  var h='<h2 class="sec serif">Your first 90 days</h2><p class="lede">Everything above, in the order it should happen. Tick things off: it saves in this browser, so you can close the page and come back.</p>';
+  var h='<h2 class="sec serif">Your first 90 days</h2><p class="lede">Everything above, in the order it should happen. Tick things off: it saves in this browser, so you can close the page and come back.</p>'+
+  '<p class="howto">How to read this: tick a task as you complete it; it saves automatically in this browser, and the bar at the top tracks your overall progress.</p>';
   h+='<div class="card"><div style="display:flex;justify-content:space-between;align-items:baseline">'+
     '<span class="serif" style="font-size:21px">'+S.done.length+' of '+total+' done</span><span class="small muted">'+pct+'%</span></div>'+
     '<div class="prog"><i style="width:'+pct+'%"></i></div>'+
