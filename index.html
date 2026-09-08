@@ -224,18 +224,37 @@ var VERDICT={do:"Do this",later:"Do this (later)",light:"Light touch",maybe:"Onl
 
 var MBA_FULL=[
 {n:"SPJIMR PGPM, Mumbai",exp:"3 years minimum",fee:"₹22.66 lakh",out:"~₹24–26 LPA",fit:"best",note:"Your strongest full-time option. Mumbai, holistic admissions rather than pure score, and you clear the experience bar today."},
+{n:"IIM Kozhikode PGP-BL",exp:"3 years minimum",fee:"~₹18–20 lakh",out:"~₹20–24 LPA",fit:"good",note:"An IIM brand at a lower price than most peers, and you clear the experience bar comfortably. The strongest backup if SPJIMR doesn't work out."},
+{n:"Great Lakes PGPM, Chennai / Gurugram",exp:"~2 years minimum",fee:"~₹19–21 lakh",out:"~₹18–22 LPA",fit:"good",note:"Easier admission bar than the IIMs, decent brand in operations and analytics roles. A solid fallback, not a first choice."},
+{n:"MDI Gurgaon PGDM-BM",exp:"3 years minimum",fee:"~₹20–24 lakh",out:"~₹20–24 LPA",fit:"good",note:"18-month format, respected in BFSI and consulting-adjacent hiring in the north. Means relocating out of Mumbai."},
 {n:"ISB PGP, Hyderabad / Mohali",exp:"24 months minimum",fee:"₹40.5–44.5 lakh",out:"Median ₹32 LPA",fit:"stretch",note:"Eligible on paper. Recent cohorts average around a 716 GMAT, so this needs a strong score and a very tight story."},
 {n:"IIM Ahmedabad PGPX",exp:"4 years",fee:"~₹34.5 lakh",out:"Senior outcomes",fit:"stretch",note:"You technically qualify. The batch averages 7.5 years, though roughly 40% sit in the 4–6 year band, so it's real, just ambitious."},
+{n:"IIM Lucknow IPMX, Noida",exp:"5 years",fee:"~₹26 lakh",out:"Senior outcomes",fit:"no",note:"Not yet: you're a year short on experience."},
 {n:"IIM Bangalore EPGP",exp:"5 years",fee:"~₹33.7 lakh",out:"Senior outcomes",fit:"no",note:"Not yet: you're a year short on experience."},
 {n:"IIM Calcutta MBAEx",exp:"~5 years",fee:"₹31–34 lakh",out:"Senior outcomes",fit:"no",note:"Same story. Revisit in 2027."},
 {n:"IIM Indore EPGP / XLRI GMP",exp:"~5 years",fee:"₹20–25 lakh",out:"Mid-senior",fit:"no",note:"Borderline: likely a year early."}];
 
 var MBA_PART=[
 {n:"JBIMS Part-Time MMS, Churchgate",fee:"₹1.89 lakh total",sched:"3 years · evenings 6:30–9:30 + Sundays",fit:"best",note:"The only part-time brand in Mumbai that genuinely helps you switch, and it costs less than one Big 4 certification budget."},
+{n:"IIM Mumbai (NITIE) Weekend MBA-PGPM",fee:"~₹18 lakh total",sched:"2 years · non-residential weekends",fit:"good",note:"A real IIM, in your own city, built for working professionals with 2+ years' experience. The brand is far stronger than JBIMS; the fee is nearly ten times higher, so it only makes sense once your income has already moved up."},
 {n:"SPJIMR PGEMP / PGPGM Executive",fee:"₹9–10 lakh+",sched:"21 months modular / weekends",fit:"good",note:"Strong brand and AMBA-accredited. PGEMP wants 5+ years; the executive general management route accepts 4+."},
 {n:"NMIMS Part-Time / Online MBA",fee:"₹4–13 lakh",sched:"2–3 years",fit:"ok",note:"Credible second tier with real structure and career support. A safe choice, not a transformative one."},
 {n:"Welingkar part-time / hybrid",fee:"₹3–6 lakh",sched:"2–3 years",fit:"weak",note:"The most criticised of the Mumbai options: limited placement support and thin switch value for the money."},
 {n:"Amity / Manipal / upGrad-partnered online MBAs",fee:"₹1.5–4 lakh",sched:"2 years",fit:"weak",note:"Fine if you need the degree for an HR eligibility box. Close to zero switching power."}];
+
+var MBA_FIT=[
+{path:"Strategy / Big 4-tier consulting (MBB, Kearney, Alvarez &amp; Marsal, Redseer)",need:"Yes, close to essential",note:"Above analyst grade, these firms hire almost exclusively through MBA or campus channels. Without one, lateral entry mostly caps below the associate level."},
+{path:"Business Operations Manager / PMO / Programme Management",need:"Optional",note:"Six Sigma, PMP and a strong delivery record carry more weight here than a degree. An MBA adds polish; it doesn't buy access."},
+{path:"Fintech / consumer-tech Business Ops (Razorpay, Swiggy, PhonePe and similar)",need:"Barely relevant",note:"These firms hire on track record and pace. A part-time MBA signals seriousness but rarely changes the offer on the table."},
+{path:"Business Manager / Chief-of-Staff to a leader",need:"Helps mainly at senior levels",note:"Below Director level, execution and trust matter more than credentials. Above it, an MBA becomes a useful credibility shortcut."},
+{path:"Supply chain specialist track (CSCP / CPIM)",need:"Not needed",note:"Domain certifications matter far more than a general management degree if you go deep on supply chain specifically."},
+{path:"A full industry reset, e.g. leaving operations for finance or marketing leadership",need:"Yes, if changing track entirely",note:"A full-time MBA is the fastest credible way to rewrite your story if you want to leave operations altogether, not just leave pharma."}];
+
+var MBA_ONLINE=[
+{n:"NMIMS Global (NGA-SCE) Online MBA",prov:"UGC-DEB entitled, NAAC A+",fee:"₹2.5–4 lakh total",dur:"2 years",note:"The strongest brand among India's online MBAs, and the one recruiters are most likely to actually recognise."},
+{n:"Manipal (Online Manipal / MAHE) MBA",prov:"UGC-DEB entitled, NAAC A+",fee:"₹1.5–2.5 lakh total",dur:"2 years",note:"Reasonable mid-tier brand with decent learner support. Similar switching power to Amity."},
+{n:"Amity University Online MBA",prov:"UGC-DEB entitled, NAAC A+",fee:"₹1.2–2 lakh total",dur:"2 years",note:"Widely accepted for HR eligibility boxes and government-adjacent roles; weaker as a career-switching signal."},
+{n:"IGNOU MBA",prov:"UGC &amp; AICTE approved",fee:"~₹60,000 total",dur:"2–4 years, flexible",note:"The cheapest legitimate MBA in India. Fine as a formal qualification, negligible as a differentiator."}];
 
 var PLAN=[
 {phase:"Days 1–30 · Reposition",items:[
@@ -473,20 +492,38 @@ function secSkills(){
 
 function secMba(){
   var h='<h2 class="sec serif">The MBA question</h2><p class="lede">Worth doing for one specific reason: if you want front-line strategy consulting or a full reset of your brand ceiling. Not worth doing if your goal is programme and operations management: you can get there without the debt.</p>'+
-  '<p class="howto">How to read this: in the tables below, darker note text under a programme means it\'s a strong fit for you; lighter text means it\'s more of a stretch, or not the right one yet.</p>';
-  h+='<h3>One-year, full-time</h3><div class="tbl-wrap"><table><thead><tr><th>Programme</th><th>Needs</th><th>Fees</th><th>Outcome</th></tr></thead><tbody>';
+  '<p class="howto">How to read this: the first table shows which of your possible career paths an MBA actually changes the odds for. In the programme tables further down, sage-green note text means a strong fit for you today, dark grey means a solid backup, blue-grey means a genuine stretch, and light grey means not yet.</p>';
+  h+='<h3>Which path actually needs an MBA</h3><div class="tbl-wrap"><table><thead><tr><th>Career path</th><th>Does an MBA help?</th></tr></thead><tbody>';
+  MBA_FIT.forEach(function(m){
+    var strong=m.need.indexOf("Yes")===0;
+    h+='<tr><td><div style="font-weight:500">'+m.path+'</div><div class="small muted">'+m.note+'</div></td>'+
+      '<td style="color:'+(strong?"var(--sage-d)":"var(--soft)")+';white-space:nowrap">'+m.need+'</td></tr>';});
+  h+='</tbody></table></div>';
+  h+='<div class="note"><strong>The short version.</strong> An MBA is close to a requirement only if you want to break into front-line strategy consulting, or reset your industry entirely. For the Business Operations, PMO and Programme Management paths this plan leads with, Six Sigma, PMP and a strong delivery record do more for you than a second degree.</div>';
+  h+='<h3>Does a full-time MBA make sense for you right now?</h3><div class="card">'+
+   '<p class="small">Full-time MBA hiring in India is genuinely split down the middle right now. At tier-1 schools (the IIMs, ISB, XLRI, SPJIMR) hiring is holding up well and even growing in analytics, fintech and consulting specialisations. At tier-2 and tier-3 schools, median salaries run ₹6–10 lakh, and at tier-3 they can fall as low as ₹3–6 lakh, both at or below what you can already get through repositioning alone, without spending two years and ₹15–20 lakh to get there.</p>'+
+   '<p class="small"><strong>The honest math:</strong> a full-time MBA costs you the fee plus roughly 12–24 months of foregone salary, which at your current ₹8.5 lakh is another ₹9–17 lakh. That only pays off at a school whose placement outcomes clear ₹22–26 LPA or higher, which narrows your real list to a handful of names.</p>'+
+   '<p class="small"><strong>Verdict:</strong> full-time is worth pursuing only if you get into a tier-1 programme. If your applications land at a tier-2 or tier-3 school instead, skip full-time entirely and take the part-time or online route further down this page while you keep earning.</p></div>';
+  h+='<h3>One-year, full-time: if you go this route</h3><div class="tbl-wrap"><table><thead><tr><th>Programme</th><th>Needs</th><th>Fees</th><th>Outcome</th></tr></thead><tbody>';
   MBA_FULL.forEach(function(m){
-    h+='<tr><td><div style="font-weight:500">'+m.n+'</div><div class="small" style="color:'+(m.fit==="best"?"var(--sage-d)":"var(--faint)")+'">'+m.note+'</div></td>'+
+    var col=m.fit==="best"?"var(--sage-d)":m.fit==="good"?"var(--ink)":m.fit==="stretch"?"var(--slate)":"var(--faint)";
+    h+='<tr><td><div style="font-weight:500">'+m.n+'</div><div class="small" style="color:'+col+'">'+m.note+'</div></td>'+
       '<td class="muted">'+m.exp+'</td><td class="muted">'+m.fee+'</td><td class="muted">'+m.out+'</td></tr>';});
   h+='</tbody></table></div>';
-  h+='<div class="note"><strong>SPJIMR is your best full-time option.</strong> It\'s in Mumbai, it takes three years of experience rather than five, admissions weigh your profile rather than only your score, and ₹22.66 lakh against ₹24–26 LPA outcomes is a defensible trade. ISB and IIMA PGPX are genuine stretches: reachable with a strong GMAT, but you\'d be applying below the cohort norm.</div>';
+  h+='<div class="note"><strong>SPJIMR is your best full-time option.</strong> It\'s in Mumbai, it takes three years of experience rather than five, admissions weigh your profile rather than only your score, and ₹22.66 lakh against ₹24–26 LPA outcomes is a defensible trade. IIM Kozhikode, Great Lakes and MDI Gurgaon are real backups outside Mumbai if SPJIMR doesn\'t come through, all with lower fees than the flagship IIMs. ISB and IIM Ahmedabad PGPX are genuine stretches: reachable with a strong GMAT, but you\'d be applying below the cohort norm.</div>';
   h+='<h3>Part-time, while you keep working</h3><div class="tbl-wrap"><table><thead><tr><th>Programme</th><th>Fees</th><th>Schedule</th></tr></thead><tbody>';
   MBA_PART.forEach(function(m){
     var col=m.fit==="best"?"var(--sage-d)":m.fit==="weak"?"var(--faint)":"var(--soft)";
     h+='<tr><td><div style="font-weight:500">'+m.n+'</div><div class="small" style="color:'+col+'">'+m.note+'</div></td>'+
       '<td class="muted">'+m.fee+'</td><td class="muted">'+m.sched+'</td></tr>';});
   h+='</tbody></table></div>';
-  h+='<div class="note"><strong>If you do one part-time MBA, do JBIMS.</strong> ₹1.89 lakh total, a real Mumbai brand, and no salary sacrificed. It is the only part-time option in the city with genuine switching power. Everything else on that list is a credential, not a lever.</div>';
+  h+='<div class="note"><strong>If you want the cheapest real switch, do JBIMS.</strong> ₹1.89 lakh total, a real Mumbai brand, and no salary sacrificed. <strong>If you want the strongest brand and can carry the cost, IIM Mumbai\'s weekend MBA</strong> is an actual IIM in your own city built for working professionals, at roughly ten times JBIMS\'s fee, so it\'s worth waiting for until your income has already moved up. Everything else on that list is a credential, not a lever.</div>';
+  h+='<h3>Credible online MBAs</h3><p class="small muted" style="margin-bottom:14px">Only a specific, UGC-DEB-entitled list of universities can legally award an online MBA in India. Anything outside that list may not be valid for jobs, promotions or further study, so verify a university\'s current UGC-DEB entitlement before paying anyone.</p><div class="tbl-wrap"><table><thead><tr><th>Programme</th><th>Fees</th><th>Duration</th></tr></thead><tbody>';
+  MBA_ONLINE.forEach(function(m){
+    h+='<tr><td><div style="font-weight:500">'+m.n+'</div><div class="small muted">'+m.prov+'</div><div class="small muted">'+m.note+'</div></td>'+
+      '<td class="muted">'+m.fee+'</td><td class="muted">'+m.dur+'</td></tr>';});
+  h+='</tbody></table></div>';
+  h+='<div class="warn"><strong>Where online fits for you.</strong> None of these change your switching odds the way JBIMS or an IIM would. Use one only if you need the formal degree for an HR eligibility filter or a government-adjacent role, and pick NMIMS Global first: it\'s the strongest brand of the group, at a fraction of a campus programme\'s cost.</div>';
   h+='<h3>Should you tell employers you\'re doing one?</h3><div class="card">'+
    '<p class="small">Using it as a signal (“I\'m pursuing an MBA and can continue it alongside the role”), it cuts both ways, and it\'s worth knowing which way before you say it in an interview.</p>'+
    '<p class="small"><strong>It helps</strong> with lateral hires, where it reads as ambition and reinforces that you\'re serious about moving up rather than just moving out.</p>'+
